@@ -33,7 +33,7 @@ export const FinancialRecordsProvider = ({
   const fetchRecords = async () => {
     if (!user) return;
     const response = await fetch(
-      `http://localhost:5000/financial-records/getAllByUserID/${user.id}`
+      `https://budget-bee-api.vercel.app/financial-records/getAllByUserID/${user.id}`
     );
 
     if (response.ok) {
@@ -48,7 +48,7 @@ export const FinancialRecordsProvider = ({
   }, [user]);
 
   const addRecord = async (record: FinancialRecord) => {
-    const response = await fetch("http://localhost:5000/financial-records", {
+    const response = await fetch("https://budget-bee-api.vercel.app/financial-records", {
       method: "POST",
       body: JSON.stringify(record),
       headers: {
@@ -66,7 +66,7 @@ export const FinancialRecordsProvider = ({
 
   const updateRecord = async (id: string, newRecord: FinancialRecord) => {
     const response = await fetch(
-      `http://localhost:5000/financial-records/${id}`,
+      `https://budget-bee-api.vercel.app/financial-records/${id}`,
       {
         method: "PUT",
         body: JSON.stringify(newRecord),
