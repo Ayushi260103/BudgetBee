@@ -94,7 +94,7 @@ export const FinancialRecordsProvider = ({
 
   const deleteRecord = async (id: string) => {
     const response = await fetch(
-      `http://localhost:5000/financial-records/${id}`,
+      `https://budget-bee-api.vercel.app/financial-records/${id}`,
       {
         method: "DELETE",
       }
