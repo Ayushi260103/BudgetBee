@@ -21,7 +21,7 @@ interface FinancialRecordsContextType {
 export const FinancialRecordsContext = createContext<
   FinancialRecordsContextType | undefined
 >(undefined);
-
+const NEXT_PUBLIC_API_URL=import.meta.env.NEXT_PUBLIC_API_URL;
 export const FinancialRecordsProvider = ({
   children,
 }: {
@@ -33,7 +33,7 @@ export const FinancialRecordsProvider = ({
   const fetchRecords = async () => {
     if (!user) return;
     const response = await fetch(
-      `https://budget-bee-api.vercel.app/financial-records/getAllByUserID/${user.id}`
+      `${NEXT_PUBLIC_API_URL}/getAllByUserID/${user.id}`
     );
 
     if (response.ok) {
@@ -48,7 +48,7 @@ export const FinancialRecordsProvider = ({
   }, [user]);
 
   const addRecord = async (record: FinancialRecord) => {
-    const response = await fetch("https://budget-bee-api.vercel.app/financial-records", {
+    const response = await fetch("${NEXT_PUBLIC_API_URL}/financial-records", {
       method: "POST",
       body: JSON.stringify(record),
       headers: {
@@ -66,7 +66,7 @@ export const FinancialRecordsProvider = ({
 
   const updateRecord = async (id: string, newRecord: FinancialRecord) => {
     const response = await fetch(
-      `https://budget-bee-api.vercel.app/financial-records/${id}`,
+      `${NEXT_PUBLIC_API_URL}/financial-records/${id}`,
       {
         method: "PUT",
         body: JSON.stringify(newRecord),
@@ -94,7 +94,7 @@ export const FinancialRecordsProvider = ({
 
   const deleteRecord = async (id: string) => {
     const response = await fetch(
-      `https://budget-bee-api.vercel.app/financial-records/${id}`,
+      `${NEXT_PUBLIC_API_URL}/financial-records/${id}`,
       {
         method: "DELETE",
       }
