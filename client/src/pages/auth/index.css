@@ -1,0 +1,12 @@
+.sign-in-container{
+    font-family: "Montserrat";
+    font-style: italic;
+}
+h1{
+    font-weight: bold;
+    font-style: normal;
+}
+.sign-up-btn{
+    background-color: #1F4959;
+    color: #fff;
+}

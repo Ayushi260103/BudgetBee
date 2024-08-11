@@ -1,0 +1,131 @@
+
+#userName{
+  display: inline-block;
+  text-transform: lowercase;
+}
+#userName::first-letter{
+  text-transform: capitalize;
+}
+/* Centered container for the app */
+.dashboard-container {
+    width: 80%;
+    padding-right: 50px;
+  }
+  
+  /* General styling for headers within the app */
+  h1,
+  h2 {
+    color: #2c3e50;
+    font-family: "Montserrat";
+    text-align: center;
+  }
+  
+  /* Form and list container */
+  .form-container,
+  .list-container {
+    margin-bottom: 20px;
+  }
+  .form-field label,.form-container button{
+    font-family: "Montserrat";
+  }
+  
+  /* Common class for all buttons */
+  .button {
+    background-color: #1F4959;
+    color: #ffffff;
+    border: none;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .button:hover {
+    background-color: #376779;
+  }
+  .button-delete {
+    background-color: #5C7C89;
+    color: #ffffff;
+    border: none;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .button-delete:hover {
+    background-color: #376779;
+  }
+  #total-finance{
+    font-family: "Montserrat";
+    font-weight: bold;
+  }
+  /* Common class for all input fields and selects */
+  .input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: #D3DFE1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: black;
+    font-family: "Montserrat";
+    font-style: italic;
+    box-sizing: border-box; /*make width same for select and input */
+  }
+  
+  /* Labels for better readability */
+  label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .table-container {
+    margin: 20px;
+    overflow-x: auto; /* Enables horizontal scrolling if the table is too wide */
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table th,
+  .table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd; /* Light grey border for cells */
+    text-align: left;
+  }
+  
+  .table th {
+    /*background-color: #3498db; /* Darker blue header background */
+    background-color: #1F4959;
+    color: white;
+    font-family: "Montserrat";
+    font-size: 16px;
+  }
+  .table tbody{
+    font-family: "Montserrat";
+    font-style: italic;
+  }
+  .button{
+    font-family: "Montserrat";
+    font-style: italic;
+  }
+  .add-btn{
+    font-style: normal;
+  }
+  .table tbody tr:nth-child(even) {
+    /*background-color: #f2f2f2; /* Zebra striping for rows, light grey */
+    background-color: #D3DFE1;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #e8f4f8; /* Light blue hover effect for rows */
+  }
