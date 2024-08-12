@@ -7,13 +7,12 @@ const app: Express = express();
 const port = process.env.PORT || 5000;
 
 app.use(express.json());
-app.use(cors(
-  {
-    origin: ["https://budget-bee-frontend.vercel.app"],
-    methods: ["POST", "GET"],
-    credentials: true
-  }
-));
+const corsOptions = {
+  origin: '*',
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 
 const mongoURI: string ="mongodb+srv://ayushiagarwal260103:oFiQ6FaZ75B8yVG8@personal-finance-tracke.oi0v1.mongodb.net/";
 mongoose
