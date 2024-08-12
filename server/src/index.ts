@@ -9,7 +9,7 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors(
   {
-    origin: ["https://budget-bee-client.vercel.app"],
+    origin: ["https://budget-bee-frontend.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true
   }
