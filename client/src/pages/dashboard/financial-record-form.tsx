@@ -26,7 +26,7 @@ export const FinancialRecordForm = () => {
 
     const newRecord = {
       userId: user?.id ?? "",
-      date: new Date(),
+      date: new Date().toLocaleDateString('en-GB'),
       description: description,
       amount: parseFloat(amount),
       category: category==="Other"?otherCategory:category,
